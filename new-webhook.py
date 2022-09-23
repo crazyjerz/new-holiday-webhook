@@ -8,7 +8,6 @@ from os import environ
 client = httpx.Client()
 apikeylist = environ['APIKEYLIST'].split(",")
 tokenkey = environ['TOKENKEY']
-image = open("assets/icon.png", "rb").read()
 today = str(date.today())
 outDict = json.loads(open("outputdict.json", "rt").read())
 requestl = []
