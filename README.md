@@ -7,3 +7,6 @@ You will also need to fill the .json file yourself - the supplied role IDs are f
 
 ### Dependencies
 The only module not included in the standard Python installation that is used is the httpx module. It can be installed with the **pip install httpx** command.
+
+### Why is it called "new"?
+There was an "old" holiday webhook that used a completely different site and that didn't work.
