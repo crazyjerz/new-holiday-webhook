@@ -19,9 +19,10 @@ for code in outDict:
 holidays = []
 for i in requestl:
     requestedStr = client.get(i).text
+    print(requestedStr)
     for i in re.findall('{".*?"}', requestedStr):
         holidays.append(json.loads(i))
-    sleep(0.25)
+    sleep(1)
 print(holidays)
 holidayList = []
 flag = False
