@@ -49,3 +49,4 @@ for i in holidayList:
     message = f"Happy {i['name']}{roleFragment.strip()}!"
     print(message)
     client.post(tokenkey,  data={"wait": 'true', "content": message, "username": "Automated Holiday Announcer"})
+    sleep(1)
