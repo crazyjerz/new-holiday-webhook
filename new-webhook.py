@@ -14,7 +14,7 @@ requestl = []
 counter = 0
 for code in outDict:
     counter += 1
-    request = f"https://holidays.abstractapi.com/v1/?api_key={apikeylist[counter//24]}&country={code}&year={today[0:4]}&month={today[5:7]}&day={today[8:]}"
+    request = f"https://holidays.abstractapi.com/v1/?api_key={apikeylist[counter%10]}&country={code}&year={today[0:4]}&month={today[5:7]}&day={today[8:]}"
     requestl.append(request)
 holidays = []
 for i in requestl:
