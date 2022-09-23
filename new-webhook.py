@@ -41,9 +41,9 @@ for i in holidayList:
     else:
         for g in i["country"]:
             if type(outDict[g]) == int:
-                roleFragment += f" <@&{outDict[g]}> "
+                roleFragment += f" <@&{outDict[g]}>"
             else:
-                roleFragment += f"{outDict[g]}"
+                roleFragment += f" {outDict[g]}"
         if roleFragment[-2] == ",":
             roleFragment = roleFragment[:-2]+roleFragment[-1]
     message = f"Happy {i['name']}{roleFragment}!"
