@@ -21,7 +21,7 @@ for i in requestl:
     requestedStr = client.get(i).text
     for i in re.findall('{".*?"}', requestedStr):
         holidays.append(json.loads(i))
-    sleep(0.1)
+    sleep(0.125)
 print(holidays)
 holidayList = []
 flag = False
