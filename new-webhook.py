@@ -41,7 +41,7 @@ for i in holidayList:
         if k in i['name'].lower():
             greeting = ""
             break
-    if greeting = "":
+    if greeting == "":
         continue
     for j in filtered[1]:
         if j in i['name'].lower():
