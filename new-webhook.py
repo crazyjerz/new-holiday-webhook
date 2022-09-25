@@ -39,10 +39,10 @@ for i in holidayList:
     filtered = [["lgbt", "trans ", "sexual", "gender", "daylight"], ["death", "demise", "martyrdom", "good friday", "catastrophe", "memorial", "tisha", "kippur"]]
     for k in filtered[0]: 
         if k in i['name'].lower():
-            greeting = ""
+            continue
     for j in filtered[1]:
         if j in i['name'].lower():
-            greeting = "[PLACEHOLDER]"
+            greeting = "Have a meaningful"
     roleFragment = ""
     if len(i['country']) > 10:
         i['country'] = []
