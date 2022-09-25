@@ -36,7 +36,7 @@ for i in holidays:
 print(holidayList)
 for i in holidayList:
     greeting = "Happy"
-    filtered = [["lgbt", "trans ", "sexual", "gender", "daylight"], ["death", "demise", "martyrdom", "good friday", "catastrophe", "memorial", "tisha", "kippur"]]
+    filtered = [["lgbt", "trans ", "sexual", "gender", "daylight"], ["death", "demise", "martyrdom", "good friday", "catastrophe", "memorial", "tisha", "kippur", "gold star"]]
     for k in filtered[0]: 
         if k in i['name'].lower():
             greeting = ""
