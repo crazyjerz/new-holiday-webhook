@@ -35,6 +35,11 @@ for i in holidays:
         holidayList.append({"name": i['name'], "country": [i['country']]})
 print(holidayList)
 for i in holidayList:
+    greeting = "Happy"
+    if ("lgbt" or "trans " or "sexual" or "gender" or "daylight") in i['name'].lower():
+        continue
+    elif ("death" or "demise" or "good friday" or "catastrophe" or "memorial" or "tisha" or "kippur") in i['name'].lower():
+        greeting = "Have a meaningful"
     roleFragment = ""
     if len(i['country']) > 10:
         i['country'] = []
@@ -46,7 +51,7 @@ for i in holidayList:
                 roleFragment += f" {outDict[g]}"
         if roleFragment[-2] == ",":
             roleFragment = roleFragment[:-2]+roleFragment[-1]
-    message = f"Happy {i['name']}{roleFragment}!"
+    message = f"{greeting} {i['name']}{roleFragment}!"
     print(message)
     client.post(tokenkey,  data={"wait": 'true', "content": message, "username": "Automated Holiday Announcer"})
     sleep(1)
