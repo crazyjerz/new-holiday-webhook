@@ -48,7 +48,7 @@ for i in holidayList:
             greeting = "Have a meaningful"
             break
     roleFragment = "" 
-    if len(i['country']) > 10 or (i['country'] == "US" and ("world" in i['name'].lower() or "international" in i['name'].lower())):
+    if len(i['country']) > 10 or ("US" in i['country'] and ("world" in i['name'].lower() or "international" in i['name'].lower())):
         i['country'] = []
     else:
         for g in i["country"]:
