@@ -72,5 +72,5 @@ for i in holidayList:
     messageList.append(message)
 messageList = sortl(messageList)
 for m in messageList:
-    client.post(tokenkey,  data={"wait": 'true', "content": message, "username": "Automated Holiday Announcer"})
+    client.post(tokenkey,  data={"wait": 'true', "content": m, "username": "Automated Holiday Announcer"})
     sleep(1)
