@@ -34,6 +34,15 @@ for i in holidays:
     if i['name'] not in [j['name'] for j in holidayList]:
         holidayList.append({"name": i['name'], "country": [i['country']]})
 print(holidayList)
+messageList = []
+def sortl(l: list[str]) -> list[str]:
+    newl, oldl = [], []
+    for i in l:
+        if i.find("<@&") == -1:
+            newl.append(i)
+        else:
+            oldl.append(i)
+    return newl+oldl
 for i in holidayList:
     greeting = "Happy"
     filtered = [["lgbt", "trans ", "sexual", "gender", "daylight"], ["death", "demise", "martyrdom", "good friday", "catastrophe", "memorial", "fast", "tisha", "kippur", "gold star"]]
@@ -60,5 +69,8 @@ for i in holidayList:
             roleFragment = roleFragment[:-2]+roleFragment[-1]
     message = f"{greeting} {i['name']}{roleFragment}!"
     print(message)
+    messageList.append(message)
+messageList = sortl(messageList)
+for m in messageList:
     client.post(tokenkey,  data={"wait": 'true', "content": message, "username": "Automated Holiday Announcer"})
     sleep(1)
