@@ -1,11 +1,11 @@
 from concurrent.futures import process
-import httpx
+from requests import Session
 import json
 import re
 from datetime import date
 from time import sleep
 from os import environ
-client = httpx.Client()
+client = Session()
 apikeylist = environ['APIKEYLIST'].split(",")
 tokenkey = environ['TOKENKEY']
 today = str(date.today())
