@@ -45,7 +45,7 @@ def sortl(l: list[str]) -> list[str]:
     return newl+oldl
 for i in holidayList:
     greeting = "Happy"
-    filtered = [["lgbt", "trans ", "sexual", "gender", "daylight"], ["death", "demise", "martyrdom", "good friday", "mourning", "catastrophe", "memorial", "fast", "tisha", "kippur", "gold star"]]
+    filtered = [{"lgbt", "trans ", "sexual", "gender", "daylight"}, {"death", "demise", "martyrdom", "good friday", "mourning", "catastrophe", "memorial", "fast", "tisha", "kippur", "asarah", "gold star"}]
     for k in filtered[0]: 
         if k in i['name'].lower():
             greeting = ""
