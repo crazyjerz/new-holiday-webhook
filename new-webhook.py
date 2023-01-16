@@ -28,7 +28,7 @@ holidayList = []
 flag = False
 for i in holidays:
     for j in holidayList:
-        if i['name'] == j['name']:
+        if i['name'] == j['name'] and j['country'] not in i['country']:
             j['country'].append(i['country'])
             continue
     if i['name'] not in [j['name'] for j in holidayList]:
