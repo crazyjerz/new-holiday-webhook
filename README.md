@@ -6,7 +6,7 @@ First, you need API keys for the site used - abstractapi.com. Those keys (recomm
 You will also need to fill the .json file yourself - the supplied role IDs are for the server I made the script for.
 
 ### Dependencies
-The only module not included in the standard Python installation that is used is the httpx module. It can be installed with the **pip install httpx** command.
+The only module not included in the standard Python installation that is used is the requests module. It can be installed with the **pip install requests** command.
 
 ### Why is it called "new"?
 There was an "old" holiday webhook that used a completely different site and that didn't work.
